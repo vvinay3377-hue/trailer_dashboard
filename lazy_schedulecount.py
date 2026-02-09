@@ -5,12 +5,12 @@ st.set_page_config(page_title="Trailer Attachment Dashboard", layout="wide")
 st.title("Trailer Attachment Analysis")
 
 # ---------------- LOAD DATA ----------------
-file_path = r"C:\Users\vingolla\Downloads\lazy_fmc_processed.csv"
+file_path = "lazy_fmc_processed.csv"
 df = pd.read_csv(file_path)
 
 df["site"] = df["Lane"].astype(str).str[:4]
 
-region_code = r"C:\Users\vingolla\Downloads\R_codes.csv"
+region_code = "R_codes.csv"
 df_r = pd.read_csv(region_code)
 
 df["origin_region"] = df["site"].map(
